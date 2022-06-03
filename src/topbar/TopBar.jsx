@@ -3,7 +3,7 @@ import "./topbar.css"
 import pic from "./pic.jpg"
 
 export default function TopBar() {
-  const user=false;
+  const user=true;
   return (
     <div className="top">
       <div className="topLeft">
@@ -14,11 +14,12 @@ export default function TopBar() {
         </div>
       <div className="topCenter">
       <ul className="topList">
-          <li className="topListItem"><Link className="link" to="/">HOME</Link>
+          <li className="topListItem"><a className="link" href="/">HOME</a>
           </li>
-          <li className="topListItem"><Link className="link" to="/">ABOUT</Link></li>
-          <li className="topListItem"><Link className="link" to="/">CONTACT</Link></li>
-          <li className="topListItem"><Link className="link" to="/write">WRITE</Link></li>
+          <li className="topListItem"><a className="link" href="/">ABOUT</a></li>
+          <li className="topListItem"><a className="link" href="/">CONTACT</a></li>
+          <li className="topListItem"><a className="link" href="/write">WRITE</a></li>
+          <li className="topListItem"><a className="link" href="/settings">SETTINGS</a></li>
           <li className="topListItem">{user && "LOGOUT"}</li>
       </ul>
       </div>
@@ -30,10 +31,10 @@ export default function TopBar() {
           ):(
             <ul className="topList">
               <li className="topListItem">
-                <Link className="link" to="/login">LOGIN</Link>
+                <a className="link" href="/login">LOGIN</a>
               </li>
               <li className="topListItem">
-                <Link className="link" to="/register">REGISTER</Link>
+                <a className="link" href="/register">REGISTER</a>
               </li>
             </ul>
           )

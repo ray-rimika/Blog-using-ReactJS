@@ -1,5 +1,5 @@
 
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import "./login.css"
 
 export default function Login() {
@@ -14,7 +14,7 @@ export default function Login() {
                 <button className="loginButton">Login</button>
             </form>
             <button className="loginRegisterButton">
-            <Link className="link" to="/register">Register</Link></button>
+            <a className="link" href="/register">Register</a></button>
         </div>
     )
 }
